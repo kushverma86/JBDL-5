@@ -1,0 +1,11 @@
+You have to write a small description about the difference b/w these 2, your personal views which one to use and why ?
+
+
+The latter one is more efficient in terms of network traffic and database server resources (CPU and Disk) because:
+
+1. The number of round-trips to the database is 1 instead of n.
+2. The database engine optimizes its data traversal process for n parameters, i.e. it may require only one scan per table instead of n.
+
+Also to understand how saveAll() works internally refer to this link : 
+
+https://stackoverflow.com/questions/53996227/is-saveall-of-mongorepository-inserting-data-in-one-bulk
